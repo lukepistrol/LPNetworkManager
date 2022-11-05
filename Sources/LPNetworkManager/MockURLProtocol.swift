@@ -21,9 +21,9 @@ final public class MockURLProtocol: URLProtocol {
     private static var requestHandler: ((URLRequest) throws -> MockConfiguration)?
 
     public static func setRequestHandler(with data: Data?,
-                                  statusCode: Int = 200,
-                                  httpVersion: String? = nil,
-                                  headerFields: [String: String]? = nil) {
+                                         statusCode: Int = 200,
+                                         httpVersion: String? = nil,
+                                         headerFields: [String: String]? = nil) {
         requestHandler = { request in
             guard let url = request.url else { throw URLError(.badURL) }
 

@@ -15,10 +15,16 @@ let package = Package(
             name: "LPNetworkManager",
             targets: ["LPNetworkManager"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.1.0"),
+    ],
     targets: [
         .target(
             name: "LPNetworkManager",
-            dependencies: []),
+            dependencies: [],
+            plugins: [
+                .plugin(name: "SwiftLint", package: "SwiftLintPlugin")
+            ]),
         .testTarget(
             name: "LPNetworkManagerTests",
             dependencies: ["LPNetworkManager"]),
