@@ -1,5 +1,7 @@
 # LPNetworkManager
 
+> ⚠️ This is just a convenience wrapper for my personal projects – nothing special!
+
 A small, lightweight wrapper class for async/await fetching on `URLSession`.
 
 By default it gets instantiated with `URLSession.shared`. But upon testing a
